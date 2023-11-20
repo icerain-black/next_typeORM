@@ -5,12 +5,18 @@ export const AppDataSource = new DataSource({
     type: "postgres",
     host: "localhost",
     port: 5432,
-    username: "icerain",
+    username: "postgres",
     password: "123456",
     database: "blog_development",
     synchronize: false,
     logging: false,
-    entities: [],
-    migrations: [],
-    subscribers: [],
+    entities: [
+        "dist/entity/**/*.js"
+    ],
+    migrations: [
+        "dist/migration/**/*.js"
+    ],
+    subscribers: [
+        "dist/subscriber/**/*.js"
+    ],
 })
