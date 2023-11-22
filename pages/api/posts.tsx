@@ -1,5 +1,5 @@
 import { NextApiHandler } from "next"
-import readMarkDown from "@/lib/readMarkDown";
+import {readMarkDown} from "@/lib/readMarkDown";
 
 const posts:NextApiHandler = async (req,res) => {
   let data = await readMarkDown()
